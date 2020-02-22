@@ -5,6 +5,9 @@ public:
 
   std::string filesError = "Unable to open file ";
 
+  std::string zeroNumberError = "Unable to process with number as zero in ";
+  std::string negativeNumberError = "Unable to process with negative number in ";
+
   std::string oneDimensionalArrayZeroLengthError = "Unable to process one dimensional array with length as zero in ";
   std::string oneDimensionalArrayNegativeLengthError = "Unable to process one dimensional array with negative length in ";
 
@@ -23,6 +26,7 @@ public:
   std::string unequalEndLinePointsError = "Unable to process matrices with unequal end line points in ";
   std::string unequalStartColumnPointsError = "Unable to process matrices with unequal start column points in ";
   std::string unequalEndColumnPointsError = "Unable to process matrices with unequal end column points in ";
+
 
   virtual ~errorMessages () {}
 };
