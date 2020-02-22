@@ -30,7 +30,7 @@ using namespace dataStructures;
 
 namespace easyPassDefinitions {
 
-  // should be global for the count process of unit tests
+  // should be global for the count process of unit tests and console design
   static int passedCases = ZERO;
   static int failedCases = ZERO;
   static int cases = ZERO;
@@ -83,6 +83,8 @@ namespace easyPassDefinitions {
 
     template <class Type> void equalityHandlerOneDimensionalArrays (oneDimensionalArrayType<Type> ODAObjectOne, oneDimensionalArrayType<Type> ODAObjectTwo, const char coreFunction[]);
     template <class Type> void equalityHandlerMatrices (matrixType<Type> MTObjectOne, matrixType<Type> MTObjectTwo, const char coreFunction[]);
+
+    void filesErrorValidation (std::ifstream & file, const char coreFunction[200]);
 
     virtual ~errorsHandler () {}
   };
