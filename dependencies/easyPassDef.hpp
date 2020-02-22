@@ -30,7 +30,7 @@ using namespace dataStructures;
 
 namespace easyPassDefinitions {
 
-  // should be global for the count process of unit tests and console design
+  // should be global for the count process of unit tests
   static int passedCases = ZERO;
   static int failedCases = ZERO;
   static int cases = ZERO;
