@@ -58,6 +58,8 @@ namespace easyPassDefinitions {
     template <class Type> bool isNotZero (Type parameter);
     template <class Type> bool isNegativeOrZero (Type parameter);
     template <class Type> bool isNotNegativeOrZero (Type parameter);
+    template <class Type> bool isBigger (Type parameterOne, Type parameterTwo);
+    template <class Type> bool isLower (Type parameterOne, Type parameterTwo);
 
     template <class Type> bool isNull (Type parameter);
     template <class Type> bool isNotNull (Type parameter);
@@ -87,6 +89,8 @@ namespace easyPassDefinitions {
     template <class Type> void equalityHandlerOneDimensionalArrays (oneDimensionalArrayType<Type> ODAObjectOne, oneDimensionalArrayType<Type> ODAObjectTwo, const char coreFunction[]);
     template <class Type> void equalityHandlerMatrices (matrixType<Type> MTObjectOne, matrixType<Type> MTObjectTwo, const char coreFunction[]);
 
+    template <class Type> void checkLengthHandler (iteratorObject<Type> ItObject, int length, const char coreFunction[]);
+    
     void standardFileHandler (std::ifstream & file, const char coreFunction[]);
 
     template <class Type> void zeroNumberHandler (Type parameter, const char coreFunction[]);
