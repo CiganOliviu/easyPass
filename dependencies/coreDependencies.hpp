@@ -6,7 +6,3 @@
 #include <string.h>
 #include <time.h>
 #include <thread>
-
-#ifndef ZERO
-#define ZERO 0
-#endif
