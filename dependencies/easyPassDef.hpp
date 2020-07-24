@@ -1,18 +1,14 @@
 /*
 MIT License
-
 Copyright (c) 2020 Cigan Oliviu David
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -30,6 +26,7 @@ SOFTWARE.
 #include "preprocessors.hpp"
 
 using namespace dataStructures;
+using namespace calculationStructures;
 
 namespace easyPassDefinitions {
 
@@ -93,7 +90,7 @@ namespace easyPassDefinitions {
     template <class Type> void equalityHandlerMatrices (matrixType<Type> MTObjectOne, matrixType<Type> MTObjectTwo, const char coreFunction[]);
 
     template <class Type> void checkLengthHandler (iteratorObject<Type> ItObject, int length, const char coreFunction[]);
-    
+
     void standardFileHandler (std::ifstream & file, const char coreFunction[]);
 
     template <class Type> void zeroNumberHandler (Type parameter, const char coreFunction[]);
@@ -136,19 +133,23 @@ namespace easyPassDefinitions {
 
     template <class Type> void readTree (binaryTreeType<Type> *& root);
     template <class Type> void putsTree (binaryTreeType<Type> * root);
-    
+
     virtual ~lowLevelSupport () {}
   };
 
+
   class checkAndSupport {
   private:
-    errorsHandler __handler__;
+    errorsHandler __errorMessages__;
 
   public:
     checkAndSupport () {}
 
-    template <class Type> Type returnTheMaximumParameter (limits<Type> limitsObject);
-    template <class Type> Type returnTheMinimumParameter (limits<Type> limitsObject);
+    template <class Type> Type returnTheMaximumParameterWithObject (limits<Type> limitsObject);
+    template <class Type> Type returnTheMaximumParameterWithoutObject (Type parameterOne, Type parameterTwo);
+    template <class Type> Type returnTheMinimumParameterWithObject (limits<Type> limitsObject);
+    template <class Type> Type returnTheMinimumParameterWithoutObject (Type parameterOne, Type parameterTwo);
+
     template <class Type> void interchangeValues (Type & parameterOne, Type & parameterTwo);
 
     virtual ~checkAndSupport () {}

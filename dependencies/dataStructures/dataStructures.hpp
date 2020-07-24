@@ -145,9 +145,9 @@ namespace dataStructures {
 
     public:
       iteratorObject (int inputLength) { standardLength = inputLength; }
-      
+
       #define constantLength standardLength
-      
+
       Type * iteratorArray = new Type[constantLength];
 
       virtual ~iteratorObject () {}
